@@ -1,0 +1,11 @@
+.*.swp
+*.pyc
+MANIFEST
+/*.egg-info
+/*.egg
+/dist/
+/build/
+/dat/
+/tmp/
+libloop.so
+loop

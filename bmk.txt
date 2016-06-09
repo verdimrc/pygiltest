@@ -1,0 +1,22 @@
+# ./loop (single thread native)
+$ /usr/bin/time ./loop 
+29.86user 0.01system 0:31.08elapsed 96%CPU (0avgtext+0avgdata 280maxresident)k
+0inputs+0outputs (0major+121minor)pagefaults 0swaps
+
+
+################################################################################
+# ./test.py
+################################################################################
+# 1 qthread calling ctype function (release GIL)
+Finish <PyQt4.QtCore.QThread object at 0xb54e50d0> in 31.1s
+
+# 2 qthreads calling ctype functions (release GIL)
+Finish <PyQt4.QtCore.QThread object at 0xb5513120> in 30.4s
+Finish <PyQt4.QtCore.QThread object at 0xb5513170> in 30.5s
+
+# 1 qthread calling Python function
+Finish <PyQt4.QtCore.QThread object at 0xb55070d0> in 14.2s
+
+# 2 qthreads calling Python functions
+Finish <PyQt4.QtCore.QThread object at 0xb5457120> in 35.3s
+Finish <PyQt4.QtCore.QThread object at 0xb5457170> in 36.5s
